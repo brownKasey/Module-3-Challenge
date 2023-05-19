@@ -10,9 +10,9 @@ function generatePassword() {
   var charCount = parseInt(window.prompt("How many characters would you like your password to contain? Choose between 8 - 128 characters"));
 
 
-  //if user has an amount under 8 or over 126 it end the function and alerts the user
-  if (charCount < 8 || charCount > 126) {
-    window.alert("Character amount has to be in between 8 or 126!!");
+  //if user has an amount under 8 or over 128 it end the function and alerts the user
+  if (charCount < 8 || charCount > 128) {
+    window.alert("Character amount has to be in between 8 or 128!!");
     return;
   };
   //if the user hits cancel
@@ -72,9 +72,6 @@ console.log(passwordarray);
   for (var i = 0; i < charCount; i++) {
     console.log(i);
     var index = Math.floor(Math.random() * passwordarray.length);
-    console.log("hello");
-    console.log(password, "password");
-    console.log(passwordarray[index], "passwordarray");
     password = password + passwordarray[index];
   };
 
